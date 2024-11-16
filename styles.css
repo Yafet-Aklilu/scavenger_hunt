@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.memory-container {
+  display: none; /* Initially hide all memory containers */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#intro {
+  display: block;
+  opacity: 1;
+}
+
+button {
+  background-color: #f39c12;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.memory-gallery img {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.memory-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.memory-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.popup button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#question-announcer1, #question-announcer2, #question-announcer3, #question-announcer4, #question-announcer5 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Fade-in animation for each question */
+.memory-container.fade-in {
+  display: block;
+  opacity: 1;
+}
+
+/* Background animations */
+body {
+  animation: backgroundAnimation 30s infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-color: #f3f3f3; }
+  50% { background-color: #fff3e6; }
+  100% { background-color: #f3f3f3; }
+}
+/* Popup Modal */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.popup button {
+  position: absolute;
+  top: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#close-popup {
+  top: 20px;
+  right: 20px;
+}
+
+.popup-arrow {
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+#prev-img {
+  left: 20px;
+}
+
+#next-img {
+  right: 20px;
+}
